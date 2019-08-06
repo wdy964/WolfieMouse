@@ -137,7 +137,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "tools/vagrant/install_gcc_arm_tools.sh"
   config.vm.provision "shell", path: "tools/vagrant/eclipse_cdt.sh"
   config.vm.provision "shell", path: "tools/vagrant/install_coolterm.sh"
-  config.vm.provision "shell", inline: "sudo apt-get install -y gdb python3 pip3 python pip"
+  config.vm.provision "shell", inline: "sudo apt-get install -y gdb python3 python3-pip python python-pip"
   # Install ZSH and grml-zsh-config.
   # See https://grml.org/zsh/#grmlzshconfig
   config.vm.provision "shell", inline: "sudo apt-get install -y zsh wget && sudo chsh -s /usr/bin/zsh vagrant"
